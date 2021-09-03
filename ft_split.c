@@ -21,7 +21,7 @@ static int	ft_cntwrd(char const *s, char c)
 	counter = 0;
 	while (s[i])
 	{
-		while (s[i] == c) A  ana gosta de c
+		while (s[i] == c)
 			i++;
 		if (s[i] != '\0')
 			counter++;
@@ -51,7 +51,7 @@ static char	*ft_strndup(const char *s, size_t n)
 	return (str);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		j;

@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-int			counter(int n)
+int	counter(int n)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (n < 0)
@@ -30,7 +30,7 @@ int			counter(int n)
 	return (len);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*str;
 	int		size;

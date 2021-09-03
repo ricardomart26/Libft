@@ -28,7 +28,7 @@ static int	bigger_126(int c)
 		return (0);
 }
 
-int			ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (less_32(c) && bigger_126(c))
 		return (1);
