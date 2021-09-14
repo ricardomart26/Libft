@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   vec.c                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rimartin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/14 19:29:47 by rimartin          #+#    #+#             */
+/*   Updated: 2021/09/14 19:30:38 by rimartin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 t_vec	init_vec(size_t	capacity, size_t bytes)
@@ -20,5 +32,5 @@ static void	add_last(t_vec *vec, int number, int pos)
 t_vec	vec_add_value(t_vec vec, int number, int pos)
 {
 	if (pos == vec.lenght - 1)
-		(int)vec.buffer[pos] = number;		
+		(int)vec.buffer[pos] = number;
 }
