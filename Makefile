@@ -6,7 +6,7 @@
 #    By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/24 20:16:53 by rimartin          #+#    #+#              #
-#    Updated: 2021/09/17 23:57:13 by rimartin         ###   ########.fr        #
+#    Updated: 2021/09/17 23:57:42 by rimartin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,7 +89,7 @@ $(NAME) : $(OBJ) $(DEPS)
 			ranlib $(NAME)
 
 clean	:
-			rm -f Objs/$(OBJ)
+			rm -f Objs/*.o
 
 fclean	: clean
 			rm -f $(NAME)
