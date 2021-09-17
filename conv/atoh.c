@@ -6,11 +6,24 @@
 /*   By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 23:44:31 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/17 23:44:32 by rimartin         ###   ########.fr       */
+/*   Updated: 2021/09/17 23:53:11 by rimartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	count_uni_hexa(unsigned long long adress)
+{
+	int	counter;
+
+	counter = 0;
+	while (adress > 0)
+	{
+		adress /= 16;
+		counter++;
+	}
+	return (counter);
+}
 
 char	*convert_hexa(unsigned int n, int control)
 {

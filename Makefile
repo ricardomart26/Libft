@@ -6,7 +6,7 @@
 #    By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/24 20:16:53 by rimartin          #+#    #+#              #
-#    Updated: 2021/09/17 23:42:30 by rimartin         ###   ########.fr        #
+#    Updated: 2021/09/17 23:55:51 by rimartin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,17 +63,28 @@ SRC		= 	mem/ft_bzero.c \
 			env/path_env.c
 			
 
-OBJ 	= $(SRC:.c=.o)
+DEPS = $(shell find $(HEADER) -name *.h)
+
+OBJ 	= $(SRC:%.c=%.o)
 
 CC		= gcc -Wall -Werror -Wextra -I $(HEADER)
 
-HEADER	= includes/libft.h
+OBJ_DIR = Objs
 
-INCLUDES = -I includes/
+HEADER	= includes
 
+INCLUDES = -I $(HEADER)
+
+LIBS = -L./$(HEADER) -lft
+
+Objs/%.o: %.c
+	$(CC) $(INCLUDES) -c -o $@ $<
+	
 all		: $(NAME)
 
-$(NAME) : $(OBJ) $(INCLUDES)
+$(NAME) : $(OBJ) $(DEPS)
+			mkdir Objs
+			mv $(OBJ) Objs
 			ar rcs $@ $^
 			ranlib $(NAME)
 
