@@ -1,34 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec.c                                              :+:      :+:    :+:   */
+/*   error_msg.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/17 23:41:31 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/17 23:43:28 by rimartin         ###   ########.fr       */
+/*   Created: 2021/09/17 23:44:04 by rimartin          #+#    #+#             */
+/*   Updated: 2021/09/17 23:44:05 by rimartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_vec	init_vec(size_t	capacity, size_t bytes)
+void	error_msg(char *str)
 {
-	t_vec	vec;
-
-	vec.bytes = bytes;
-	vec.capacity = capacity;
-	vec.lenght = 0;
-	vec.buffer = ft_calloc(capacity, bytes);
-	if (!vec.buffer)
-		return ;
-	return (vec);
-}
-
-static void	add_last(t_vec *vec, int number, int pos)
-{
-}
-
-t_vec	vec_add_value(t_vec vec, int number, int pos)
-{
+	ft_putstr_fd(str, 1);
+	exit(0);
 }

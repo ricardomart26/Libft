@@ -6,83 +6,83 @@
 #    By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/24 20:16:53 by rimartin          #+#    #+#              #
-#    Updated: 2021/03/09 18:10:39 by rimartin         ###   ########.fr        #
+#    Updated: 2021/09/17 23:42:30 by rimartin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 	= 	libft.a
 
-SRC		= 	ft_atoi.c \
-			ft_bzero.c \
-			ft_calloc.c \
-			ft_isalnum.c \
-			ft_isalpha.c \
-			ft_isascii.c \
-			ft_isdigit.c \
-			ft_isprint.c \
-			ft_itoa.c \
-			ft_memccpy.c \
-			ft_memchr.c \
-			ft_memcmp.c \
-			ft_memcpy.c \
-			ft_memmove.c \
-			ft_memset.c \
-			ft_strchr.c \
-			ft_putchar_fd.c \
-			ft_putendl_fd.c \
-			ft_putnbr_fd.c \
-			ft_putstr_fd.c \
-			ft_split.c \
-			ft_strchr.c \
-			ft_strdup.c \
-			ft_strjoin.c \
-			ft_strlcat.c \
-			ft_strlcpy.c \
-			ft_strlen.c \
-			ft_strmapi.c \
-			ft_strncmp.c \
-			ft_strnstr.c \
-			ft_strrchr.c \
-			ft_strtrim.c \
-			ft_substr.c \
-			ft_tolower.c \
-			ft_toupper.c \
-
-SRCBON 	=  ft_lstadd_back.c \
-		   ft_lstadd_front.c \
-		   ft_lstclear.c \
-		   ft_lstdelone.c \
-		   ft_lstiter.c \
-		   ft_lstlast.c \
-		   ft_lstmap.c \
-		   ft_lstnew.c \
-		   ft_lstsize.c \
+SRC		= 	mem/ft_bzero.c \
+			mem/ft_calloc.c \
+			mem/ft_memccpy.c \
+			mem/ft_memchr.c \
+			mem/ft_memcmp.c \
+			mem/ft_memcpy.c \
+			mem/ft_memmove.c \
+			mem/ft_memset.c \
+			validation/ft_isalnum.c \
+			validation/ft_isalpha.c \
+			validation/ft_isascii.c \
+			validation/ft_isdigit.c \
+			validation/ft_isprint.c \
+			validation/check_ext.c \
+			print/ft_putchar_fd.c \
+			print/ft_putendl_fd.c \
+			print/ft_putnbr_fd.c \
+			print/ft_putstr_fd.c \
+			print/error_msg.c \
+			strings/ft_strchr.c \
+			strings/ft_split.c \
+			strings/ft_strchr.c \
+			strings/ft_strdup.c \
+			strings/ft_strjoin.c \
+			strings/ft_strlcat.c \
+			strings/ft_strlcpy.c \
+			strings/ft_strlen.c \
+			strings/ft_strmapi.c \
+			strings/ft_strncmp.c \
+			strings/ft_strnstr.c \
+			strings/ft_strrchr.c \
+			strings/ft_strtrim.c \
+			strings/ft_substr.c \
+			strings/ft_tolower.c \
+			strings/ft_toupper.c \
+			strings/strjoin3.c \
+			list/ft_lstadd_back.c \
+		    list/ft_lstadd_front.c \
+		    list/ft_lstclear.c \
+		    list/ft_lstdelone.c \
+		    list/ft_lstiter.c \
+		    list/ft_lstlast.c \
+		    list/ft_lstmap.c \
+		    list/ft_lstnew.c \
+		    list/ft_lstsize.c \
+			conv/ft_itoa.c \
+			conv/ft_atoi.c \
+			conv/atoh.c \
+			env/path_env.c
+			
 
 OBJ 	= $(SRC:.c=.o)
 
-OBJBON 	= $(SRCBON:.c=.o)
-
 CC		= gcc -Wall -Werror -Wextra -I $(HEADER)
 
-HEADER	= libft.h
+HEADER	= includes/libft.h
+
+INCLUDES = -I includes/
 
 all		: $(NAME)
 
-$(NAME) : $(OBJ)
+$(NAME) : $(OBJ) $(INCLUDES)
 			ar rcs $@ $^
 			ranlib $(NAME)
 
-bonus	: $(OBJBON) $(OBJ)
-			ar -rcs $(NAME) $(OBJBON) $(OBJ)
-
 clean	:
-			rm -f $(OBJ) $(OBJBON)
+			rm -f $(OBJ)
 
 fclean	: clean
 			rm -f $(NAME)
 
 re		: fclean $(NAME)
 
-rebonus	: fclean bonus
-
-.PHONY: all clean bonus clean fclean re rebonus
+.PHONY: all clean fclean re

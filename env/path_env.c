@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec.c                                              :+:      :+:    :+:   */
+/*   path_env.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/17 23:41:31 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/17 23:43:28 by rimartin         ###   ########.fr       */
+/*   Created: 2021/09/17 23:44:16 by rimartin          #+#    #+#             */
+/*   Updated: 2021/09/17 23:44:19 by rimartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_vec	init_vec(size_t	capacity, size_t bytes)
+char	*get_env_path(char **envp)
 {
-	t_vec	vec;
+	int	x;
 
-	vec.bytes = bytes;
-	vec.capacity = capacity;
-	vec.lenght = 0;
-	vec.buffer = ft_calloc(capacity, bytes);
-	if (!vec.buffer)
-		return ;
-	return (vec);
-}
-
-static void	add_last(t_vec *vec, int number, int pos)
-{
-}
-
-t_vec	vec_add_value(t_vec vec, int number, int pos)
-{
+	x = 0;
+	while (envp[x])
+	{
+		if (ft_strncmp("PATH", envp[x], 4))
+			return (envp[x] + 5);
+		x++;
+	}
+	return (NULL);
 }

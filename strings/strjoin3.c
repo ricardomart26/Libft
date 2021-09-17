@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec.c                                              :+:      :+:    :+:   */
+/*   strjoin3.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/17 23:41:31 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/17 23:43:28 by rimartin         ###   ########.fr       */
+/*   Created: 2021/09/17 23:43:42 by rimartin          #+#    #+#             */
+/*   Updated: 2021/09/17 23:43:43 by rimartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_vec	init_vec(size_t	capacity, size_t bytes)
+char	*ft_str3join(char *s1, char *s2, char *s3)
 {
-	t_vec	vec;
+	char	*str;
+	int		sizetotal;
 
-	vec.bytes = bytes;
-	vec.capacity = capacity;
-	vec.lenght = 0;
-	vec.buffer = ft_calloc(capacity, bytes);
-	if (!vec.buffer)
-		return ;
-	return (vec);
-}
-
-static void	add_last(t_vec *vec, int number, int pos)
-{
-}
-
-t_vec	vec_add_value(t_vec vec, int number, int pos)
-{
+	if (!s1 || !s2 || !s3)
+		return (NULL);
+	sizetotal = ft_strlen(s1) + ft_strlen(s2) + ft_strlen(s3);
+	str = (char *)malloc(sizetotal + 1);
+	if (!str)
+		return (NULL);
+	while (*s1)
+		*str++ = *s1++;
+	while (*s2)
+		*str++ = *s2++;
+	while (*s3)
+		*str++ = *s3++;
+	*str = '\0';
+	return (str - sizetotal);
 }
