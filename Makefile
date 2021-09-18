@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+         #
+#    By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/24 20:16:53 by rimartin          #+#    #+#              #
-#    Updated: 2021/09/17 23:57:42 by rimartin         ###   ########.fr        #
+#    Updated: 2021/09/18 04:37:43 by ricardo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,6 @@ SRC		= 	mem/ft_bzero.c \
 			print/error_msg.c \
 			strings/ft_strchr.c \
 			strings/ft_split.c \
-			strings/ft_strchr.c \
 			strings/ft_strdup.c \
 			strings/ft_strjoin.c \
 			strings/ft_strlcat.c \
@@ -83,9 +82,9 @@ Objs/%.o: %.c
 all		: $(NAME)
 
 $(NAME) : $(OBJ) $(DEPS)
-			mkdir Objs
+			mkdir -p Objs
 			mv $(OBJ) Objs
-			ar rcs $@ $^
+			ar rcs $@ Objs/*.o
 			ranlib $(NAME)
 
 clean	:

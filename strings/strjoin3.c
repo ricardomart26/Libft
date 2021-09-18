@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   strjoin3.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 23:43:42 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/17 23:43:43 by rimartin         ###   ########.fr       */
+/*   Updated: 2021/09/18 04:28:47 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_str3join(char *s1, char *s2, char *s3)
+char	*ft_str3join(const char *s1, const char *s2, const char *s3)
 {
 	char	*str;
 	int		sizetotal;

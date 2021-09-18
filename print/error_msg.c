@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   error_msg.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 23:44:04 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/17 23:44:05 by rimartin         ###   ########.fr       */
+/*   Updated: 2021/09/18 04:24:47 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	error_msg(char *str)
+void	error_msg(const char *str)
 {
 	ft_putstr_fd(str, 1);
 	exit(0);

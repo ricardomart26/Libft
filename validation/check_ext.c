@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   check_ext.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 23:43:57 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/17 23:43:58 by rimartin         ###   ########.fr       */
+/*   Updated: 2021/09/18 04:29:12 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check_file(char *file, char *ext)
+int	check_file(const char *file, const char *ext)
 {
 	while (*file != '\0')
 	{
