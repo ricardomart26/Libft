@@ -6,7 +6,7 @@
 #    By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/24 20:16:53 by rimartin          #+#    #+#              #
-#    Updated: 2021/09/17 23:57:42 by rimartin         ###   ########.fr        #
+#    Updated: 2021/09/18 21:20:24 by rimartin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,12 @@ SRC		= 	mem/ft_bzero.c \
 			conv/ft_atoi.c \
 			conv/atoh.c \
 			env/path_env.c
-			
+
+define PRINT(X, F) printf(#X " is %"#F " and the address is %p\n", X, &X);
+define SQR(X, C)  		\
+	while (C-- > 1) 			\
+		X *= X;
+
 
 DEPS = $(shell find $(HEADER) -name *.h)
 
