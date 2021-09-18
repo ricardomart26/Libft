@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   check_range.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/13 13:19:45 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/18 04:55:12 by ricardo          ###   ########.fr       */
+/*   Created: 2021/09/18 05:36:19 by ricardo           #+#    #+#             */
+/*   Updated: 2021/09/18 05:36:19 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-bool	ft_isalpha(const int c)
+bool	range_int(int nbr, int min, int max)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	if (nbr >= min && nbr <= max)
+		return (true);
+	return (false);
+}
+
+bool	range_float(float nbr, float min, float max)
+{
+	if (nbr >= min && nbr <= max)
+		return (true);
+	return (false);
+}
+
+bool	range_double(double nbr, double min, double max)
+{
+	if (nbr >= min && nbr <= max)
 		return (true);
 	return (false);
 }

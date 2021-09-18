@@ -6,7 +6,7 @@
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 23:44:04 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/18 04:24:47 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/09/18 05:06:36 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	error_msg(const char *str)
 {
-	ft_putstr_fd(str, 1);
+	ft_putstr_fd(str, 2);
 	exit(0);
 }

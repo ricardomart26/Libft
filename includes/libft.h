@@ -6,7 +6,7 @@
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/24 20:16:21 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/18 04:36:32 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/09/18 05:36:04 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdint.h>
+# include <stdbool.h>
 
 typedef struct s_list
 {
@@ -29,22 +31,25 @@ typedef struct s_vec
 	void	*buffer;
 }				t_vec;
 
-
-
+bool	range_int(int nbr, int min, int max);
+bool	range_float(float nbr, float min, float max);
+bool	range_double(double nbr, double min, double max);
+char	*search_word_sp(char *str, char *word, bool debug);
+char	*search_word(char *str, char *word, bool debug);
 t_vec	init_vec(size_t	capacity, size_t bytes);
 void	error_msg(const char *str);
 char	*convert_hexa(unsigned int n, const int control);
 char	*get_env_path(char **envp);
-int		check_file(const char *file, const char *ext);
+bool	check_file(const char *file, const char *ext);
 char	*ft_str3join(const char *s1, const char *s2, const char *s3);
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
-int		ft_isalnum(const int c);
-int		ft_isalpha(const int c);
-int		ft_isascii(const int c);
-int		ft_isdigit(const int c);
-int		ft_isprint(const int c);
+bool	ft_isalnum(const int c);
+bool	ft_isalpha(const int c);
+bool	ft_isascii(const int c);
+bool	ft_isdigit(const int c);
+bool	ft_isprint(const int c);
 char	*ft_itoa(const int n);
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void	*ft_memchr(const void *s, const int c, size_t n);
@@ -53,7 +58,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, const int c, size_t n);
 char	*ft_strchr(const char *s, int c);
-int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strdup(const char *s);
 size_t	ft_strlcat(const char *dest, const char *src, size_t size);
 size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);

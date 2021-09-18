@@ -6,7 +6,7 @@
 #    By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/24 20:16:53 by rimartin          #+#    #+#              #
-#    Updated: 2021/09/18 04:37:43 by ricardo          ###   ########.fr        #
+#    Updated: 2021/09/18 05:20:15 by ricardo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,7 @@ SRC		= 	mem/ft_bzero.c \
 			strings/ft_tolower.c \
 			strings/ft_toupper.c \
 			strings/strjoin3.c \
+			strings/search_word.c \
 			list/ft_lstadd_back.c \
 		    list/ft_lstadd_front.c \
 		    list/ft_lstclear.c \
