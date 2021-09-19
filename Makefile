@@ -6,7 +6,7 @@
 #    By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/24 20:16:53 by rimartin          #+#    #+#              #
-#    Updated: 2021/09/18 05:20:15 by ricardo          ###   ########.fr        #
+#    Updated: 2021/09/19 04:37:02 by ricardo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,8 +60,9 @@ SRC		= 	mem/ft_bzero.c \
 			conv/ft_itoa.c \
 			conv/ft_atoi.c \
 			conv/atoh.c \
-			env/path_env.c
-			
+			env/path_env.c \
+			math/check_range.c \
+			math/pow.c
 
 DEPS = $(shell find $(HEADER) -name *.h)
 

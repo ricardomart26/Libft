@@ -6,7 +6,7 @@
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/24 20:16:21 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/18 05:36:04 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/09/19 05:02:20 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,14 @@
 # include <unistd.h>
 # include <stdint.h>
 # include <stdbool.h>
+# include <stdio.h>
+
+# define ABS(X) if (X < 0) X *= -1;
+# define PRINT(X, F) printf(#X " is %"#F " and the address is %p\n", X, &X);
+# define SQR(X, C)  \
+	while (C-- > 1) \
+		X *= X;
+
 
 typedef struct s_list
 {
@@ -31,6 +39,13 @@ typedef struct s_vec
 	void	*buffer;
 }				t_vec;
 
+void	pow_int(int *nbr, const int power);
+void	pow_long(long *nbr, const int power);
+void	pow_float(float *nbr, const int power);
+void	pow_double(double *nbr, const int power);
+void	pow_biglong(long long *nbr, const int power);
+bool	range_biglong(long long nbr, long long min, long long max);
+bool	range_long(long nbr, long min, long max);
 bool	range_int(int nbr, int min, int max);
 bool	range_float(float nbr, float min, float max);
 bool	range_double(double nbr, double min, double max);
@@ -40,8 +55,8 @@ t_vec	init_vec(size_t	capacity, size_t bytes);
 void	error_msg(const char *str);
 char	*convert_hexa(unsigned int n, const int control);
 char	*get_env_path(char **envp);
-bool	check_file(const char *file, const char *ext);
-char	*ft_str3join(const char *s1, const char *s2, const char *s3);
+bool	check_ext(const char *file, const char *ext);
+char	*strjoin3(const char *s1, const char *s2, const char *s3);
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
