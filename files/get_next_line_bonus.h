@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/13 13:42:57 by rimartin          #+#    #+#             */
-/*   Updated: 2021/11/20 19:32:26 by rimartin         ###   ########.fr       */
+/*   Created: 2021/09/21 04:26:17 by rimartin          #+#    #+#             */
+/*   Updated: 2021/09/21 04:49:22 by rimartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
-t_list	*ft_lstlast(t_list *lst)
+# include <stdlib.h>
+# include <unistd.h>
+# include "libft.h"
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif
+
+typedef struct s_read
 {
-	while (lst)
-	{
-		if (lst->next == NULL)
-			return (lst);
-		lst = lst->next;
-	}
-	return (lst);
-}
+	int		ret;
+	char	*temp;
+}	t_read;
+
+int		get_next_line(int fd, char **line);
+
+#endif

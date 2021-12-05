@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   convert_list_to_arr.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/13 13:42:57 by rimartin          #+#    #+#             */
-/*   Updated: 2021/11/20 19:32:26 by rimartin         ###   ########.fr       */
+/*   Created: 2021/12/03 00:00:09 by rimartin          #+#    #+#             */
+/*   Updated: 2021/12/03 00:00:25 by rimartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+char	**convert_list_to_array(t_list *lista)
 {
-	while (lst)
+	char	**arr;
+	int		i;
+
+	arr = malloc((ft_lstsize((t_list *)lista) + 1) * sizeof(char *));
+	if (!arr)
+		return (NULL);
+	i = -1;
+	while (lista != NULL)
 	{
-		if (lst->next == NULL)
-			return (lst);
-		lst = lst->next;
+		arr[++i] = ft_strdup(lista->content);
+		lista = lista->next;
 	}
-	return (lst);
+	arr[i + 1] = NULL;
+	return (arr);
 }

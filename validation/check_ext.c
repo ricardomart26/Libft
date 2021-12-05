@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_ext.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 23:43:57 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/19 05:11:32 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/11/04 22:28:30 by rimartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 bool	check_ext(const char *file, const char *ext)
 {
-	int size;
-	int size_ext;
-	
+	int	size;
+	int	size_ext;
+
 	if (!ext && !file)
 		return (false);
 	size = ft_strlen(file) - 1;

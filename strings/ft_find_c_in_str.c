@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_find_c_in_str.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/13 13:42:57 by rimartin          #+#    #+#             */
-/*   Updated: 2021/11/20 19:32:26 by rimartin         ###   ########.fr       */
+/*   Created: 2021/11/17 23:33:03 by rimartin          #+#    #+#             */
+/*   Updated: 2021/11/17 23:33:22 by rimartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+bool	find_c_in_str(int c, char *str)
 {
-	while (lst)
+	while (*str)
 	{
-		if (lst->next == NULL)
-			return (lst);
-		lst = lst->next;
+		if (c == *str)
+			return (true);
+		str++;
 	}
-	return (lst);
+	return (false);
 }

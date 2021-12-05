@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/24 20:16:21 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/19 05:02:20 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/12/03 00:00:45 by rimartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,11 @@
 # include <stdbool.h>
 # include <stdio.h>
 
-# define ABS(X) if (X < 0) X *= -1;
-# define PRINT(X, F) printf(#X " is %"#F " and the address is %p\n", X, &X);
-# define SQR(X, C)  \
-	while (C-- > 1) \
-		X *= X;
-
+// # define ABS(X) if (X < 0) X *= -1;
+// # define PRINT(X, F) printf(#X " is %"#F " and the address is %p\n", X, &X);
+// # define SQR(X, C)  \
+// 	while (C-- > 1) \
+// 		X *= X;
 
 typedef struct s_list
 {
@@ -37,8 +36,10 @@ typedef struct s_vec
 	size_t	lenght;
 	size_t	capacity;
 	void	*buffer;
-}				t_vec;
+}	t_vec;
 
+bool	is_space(char c);
+void	malloc_guard(void **alloc_var, int size, int data_type_size);
 void	pow_int(int *nbr, const int power);
 void	pow_long(long *nbr, const int power);
 void	pow_float(float *nbr, const int power);
@@ -102,5 +103,18 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),
 			void (*del)(void *));
 t_list	*ft_lstnew(void *content);
 int		ft_lstsize(t_list *lst);
+char	*ft_strndup(const char *s1, int len);
+char	*ft_strdup_and_free(char **s1);
+char	*ft_str3join(const char *s1, const char *s2, const char *s3);
+int		ft_strlen_range(const char *str, size_t st, size_t end);
+int		ft_strlen_c(const char *str, char c);
+char	*ft_strdup_range(const char *s1, int st, int end);
+int		get_next_line(int fd, char **line);
+int		ft_strlen_dp(const char	**s1);
+char	**ft_strdup_dp(const char **s1);
+void	print_dp(void **r, int fd, int len);
+char	*magic_eraser(char *str, char *set, bool f);
+bool	find_c_in_str(int c, char *str);
+char	**convert_list_to_array(t_list *lista);
 
 #endif
