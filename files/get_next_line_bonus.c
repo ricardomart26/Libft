@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 04:26:10 by rimartin          #+#    #+#             */
-/*   Updated: 2021/11/30 21:33:40 by rimartin         ###   ########.fr       */
+/*   Updated: 2021/12/05 14:26:02 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	ft_strsave(int fd, char **line, char **store)
 	}
 }
 
-static int	ft_returns(int fd, char **line, char **store, int readcount)
+static int	ft_norm(int fd, char **line, char **store, int readcount)
 {
 	if (readcount == -1)
 		return (-1);
@@ -70,5 +70,5 @@ int	get_next_line(int fd, char **line)
 			break ;
 		st.ret = read(fd, buff, BUFFER_SIZE);
 	}
-	return (ft_returns(fd, line, store, st.ret));
+	return (ft_norm(fd, line, store, st.ret));
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/24 20:16:21 by rimartin          #+#    #+#             */
-/*   Updated: 2021/12/03 00:00:45 by rimartin         ###   ########.fr       */
+/*   Updated: 2021/12/05 14:25:06 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@
 # include <stdint.h>
 # include <stdbool.h>
 # include <stdio.h>
+# include <limits.h>
+
+# define EMPTY 0
+# define ERROR -1
+
 
 // # define ABS(X) if (X < 0) X *= -1;
 // # define PRINT(X, F) printf(#X " is %"#F " and the address is %p\n", X, &X);

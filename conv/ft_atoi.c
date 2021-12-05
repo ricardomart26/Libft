@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 13:18:06 by rimartin          #+#    #+#             */
-/*   Updated: 2021/02/17 20:01:01 by rimartin         ###   ########.fr       */
+/*   Updated: 2021/12/05 14:25:16 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ int	ft_atoi(const char *str)
 	{
 		res *= 10;
 		res += (sign * (*(str++) - '0'));
-		if (res > 2147483647)
+		if (res > INT_MAX)
 			return (-1);
-		if (res < -2147483648)
+		if (res < INT_MIN)
 			return (0);
 	}
 	return (res);

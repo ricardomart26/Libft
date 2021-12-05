@@ -6,7 +6,7 @@
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 23:44:31 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/18 04:22:57 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/12/05 14:24:29 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*convert_hexa(unsigned int n, const int control)
 	len = count_uni_hexa(n);
 	res = (char *)malloc(sizeof(char) * len + 1);
 	if (!res)
-		return (0);
+		return (NULL);
 	res[len--] = '\0';
 	while (n > 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 13:42:39 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/18 04:30:25 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/12/05 14:27:59 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,5 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 			return ((void *)dest + i + 1);
 		i++;
 	}
-	dest = NULL;
-	return (dest);
+	return (NULL);
 }

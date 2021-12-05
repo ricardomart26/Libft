@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error_msg.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 23:44:04 by rimartin          #+#    #+#             */
-/*   Updated: 2021/11/27 20:17:43 by rimartin         ###   ########.fr       */
+/*   Updated: 2021/12/05 14:28:59 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	error_msg(const char *str)
 {
 	ft_putstr_fd(str, 2);
-	exit(0);
+	exit(ERROR);
 }

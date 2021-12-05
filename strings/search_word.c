@@ -6,14 +6,14 @@
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 05:35:34 by ricardo           #+#    #+#             */
-/*   Updated: 2021/09/18 05:35:34 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/12/05 14:32:34 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-static bool	search_rest_sp(char *str, char *word, int w_size, int i)
+static bool	search_rest_sp(char *str, char *word, size_t w_size, size_t i)
 {
 	int	x;
 
@@ -28,7 +28,7 @@ static bool	search_rest_sp(char *str, char *word, int w_size, int i)
 	return (false);
 }
 
-static bool	search_rest(char *str, char *word, int w_size, int i)
+static bool	search_rest(char *str, char *word, size_t w_size, size_t i)
 {
 	int	x;
 
@@ -92,22 +92,3 @@ char	*search_word_sp(char *str, char *word, bool debug)
 		error_msg("ERROR in search_word, didnt find word in str\n");
 	return (NULL);
 }
-
-// int main(void)
-// {
-// 	char *str1;
-// 	char *str2;
-
-// 	str1 = search_word("teste numero 72", "numero", NULL);
-// 	ft_putstr_fd(str1, 1);
-// 	str2 = search_word_sp("teste numero 72", "numero", NULL);
-// 	ft_putstr_fd(str2, 1);
-// 	str1 = search_word("", "numero", NULL);
-// 	ft_putstr_fd(str1, 1);
-// 	str2 = search_word_sp("", "numero", NULL);
-// 	ft_putstr_fd(str2, 1);
-// 	str1 = search_word("teste numero 72", "numer", NULL);
-// 	ft_putstr_fd(str1, 1);
-// 	str2 = search_word_sp("teste numero 72", "num", NULL);
-// 	ft_putstr_fd(str2, 1);
-// }

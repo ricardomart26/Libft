@@ -6,7 +6,7 @@
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 13:43:15 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/18 04:23:24 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/12/05 14:25:32 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_itoa(int n)
 	char	*str;
 	int		size;
 
-	if (n == -2147483648)
+	if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
 	size = counter(n);
 	str = malloc(size + 1);
