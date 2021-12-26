@@ -6,11 +6,11 @@
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 13:18:06 by rimartin          #+#    #+#             */
-/*   Updated: 2021/12/05 14:25:16 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/12/26 18:13:40 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "conv.h"
 
 int	ft_atoi(const char *str)
 {

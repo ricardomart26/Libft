@@ -6,11 +6,11 @@
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 17:30:53 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/18 04:27:59 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/12/26 18:24:38 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "string.h"
 
 static int	ft_char_in_set(const char c, char const *set)
 {

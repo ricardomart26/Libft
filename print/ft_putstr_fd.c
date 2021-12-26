@@ -6,11 +6,11 @@
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 13:41:55 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/18 04:26:09 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/12/26 18:20:13 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "print.h"
 
 void	ft_putstr_fd(const char *s, int fd)
 {

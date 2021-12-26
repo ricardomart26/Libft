@@ -6,11 +6,11 @@
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 05:36:19 by ricardo           #+#    #+#             */
-/*   Updated: 2021/09/19 04:52:09 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/12/26 18:15:47 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "math.h"
 
 bool	range_int(int nbr, int min, int max)
 {

@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   path_env.c                                         :+:      :+:    :+:   */
+/*   ft_error_msg.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/17 23:44:16 by rimartin          #+#    #+#             */
-/*   Updated: 2021/12/02 23:55:39 by rimartin         ###   ########.fr       */
+/*   Created: 2021/09/17 23:44:04 by rimartin          #+#    #+#             */
+/*   Updated: 2021/12/26 18:18:20 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "print.h"
+#include "macros.h"
 
-char	*get_env_path(char **envp)
+void	ft_error_msg(const char *str)
 {
-	int	x;
-
-	x = 0;
-	while (envp[x])
-	{
-		if (!ft_strncmp("PATH", envp[x], 4))
-			return (envp[x] + 5);
-		x++;
-	}
-	return (NULL);
+	ft_putstr_fd(str, 2);
+	exit(ERROR);
 }

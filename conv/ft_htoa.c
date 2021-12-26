@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoh.c                                             :+:      :+:    :+:   */
+/*   ft_htoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 23:44:31 by rimartin          #+#    #+#             */
-/*   Updated: 2021/12/05 14:24:29 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/12/26 18:31:20 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "conv.h"
+#include "string.h"
 
 static int	count_uni_hexa(unsigned long long adress)
 {
@@ -25,7 +26,7 @@ static int	count_uni_hexa(unsigned long long adress)
 	return (counter);
 }
 
-char	*convert_hexa(unsigned int n, const int control)
+char	*ft_htoa(unsigned int n, const int control)
 {
 	char			*res;
 	unsigned int	len;

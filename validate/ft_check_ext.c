@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_ext.c                                        :+:      :+:    :+:   */
+/*   ft_check_ext.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 23:43:57 by rimartin          #+#    #+#             */
-/*   Updated: 2021/11/04 22:28:30 by rimartin         ###   ########.fr       */
+/*   Updated: 2021/12/26 18:27:42 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "validate.h"
+#include "string.h"
 
-bool	check_ext(const char *file, const char *ext)
+bool	ft_check_ext(const char *file, const char *ext)
 {
 	int	size;
 	int	size_ext;

@@ -6,11 +6,11 @@
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 13:41:32 by rimartin          #+#    #+#             */
-/*   Updated: 2021/12/05 14:30:12 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/12/26 18:25:00 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "string.h"
 
 char	**ft_strdup_dp(const char **s1)
 {

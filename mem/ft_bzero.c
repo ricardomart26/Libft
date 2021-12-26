@@ -6,11 +6,11 @@
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 13:19:34 by rimartin          #+#    #+#             */
-/*   Updated: 2021/12/05 14:27:37 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/12/26 18:17:39 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "mem.h"
 
 void	ft_bzero(void *s, size_t n)
 {

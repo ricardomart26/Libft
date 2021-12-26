@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_env_path.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/13 13:42:39 by rimartin          #+#    #+#             */
-/*   Updated: 2021/12/26 18:17:50 by ricardo          ###   ########.fr       */
+/*   Created: 2021/09/17 23:44:16 by rimartin          #+#    #+#             */
+/*   Updated: 2021/12/26 18:31:40 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mem.h"
+#include "env.h"
+#include "string.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+char	*ft_env_path(char **envp)
 {
-	unsigned char	*d;
-	unsigned char	*s;
-	int				i;
+	int	x;
 
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	i = 0;
-	while (i < (int)n)
+	if (!envp)
+		return (NULL);
+	x = -1;
+	while (envp[++x])
 	{
-		d[i] = s[i];
-		if (s[i] == (unsigned char)c)
-			return ((void *)dest + i + 1);
-		i++;
+		if (!ft_strncmp("PATH", envp[x], 4))
+			return (envp[x] + 5);
 	}
 	return (NULL);
 }

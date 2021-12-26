@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   search_word.c                                      :+:      :+:    :+:   */
+/*   ft_find_word.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 05:35:34 by ricardo           #+#    #+#             */
-/*   Updated: 2021/12/05 14:32:34 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/12/26 18:30:02 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
+#include "string.h"
+#include "print.h"
 
 static bool	search_rest_sp(char *str, char *word, size_t w_size, size_t i)
 {
-	int	x;
+	size_t	x;
 
 	x = 0;
 	while (x < w_size)
@@ -30,7 +30,7 @@ static bool	search_rest_sp(char *str, char *word, size_t w_size, size_t i)
 
 static bool	search_rest(char *str, char *word, size_t w_size, size_t i)
 {
-	int	x;
+	size_t	x;
 
 	x = 0;
 	while (x < w_size)
@@ -41,14 +41,14 @@ static bool	search_rest(char *str, char *word, size_t w_size, size_t i)
 	return (true);
 }
 
-char	*search_word(char *str, char *word, bool debug)
+char	*ft_find_word(char *str, char *word, bool debug)
 {
 	int	size;
 	int	i;
 
 	if (!str || !word)
 	{
-		error_msg("ERROR in search_word, str or word is empty\n");
+		ft_error_msg("ERROR in search_word, str or word is empty\n");
 		return (0);
 	}
 	size = ft_strlen(word);
@@ -63,18 +63,18 @@ char	*search_word(char *str, char *word, bool debug)
 		i++;
 	}
 	if (debug == 1)
-		error_msg("ERROR in search_word, didnt find word in str\n");
+		ft_error_msg("ERROR in search_word, didnt find word in str\n");
 	return (NULL);
 }
 
-char	*search_word_sp(char *str, char *word, bool debug)
+char	*ft_find_word_sp(char *str, char *word, bool debug)
 {
 	int	size;
 	int	i;
 
 	if (!str || !word)
 	{
-		error_msg("ERROR in search_word, str or word is empty\n");
+		ft_error_msg("ERROR in search_word, str or word is empty\n");
 		return (0);
 	}
 	size = ft_strlen(word);
@@ -89,6 +89,6 @@ char	*search_word_sp(char *str, char *word, bool debug)
 		i++;
 	}
 	if (debug == 1)
-		error_msg("ERROR in search_word, didnt find word in str\n");
+		ft_error_msg("ERROR in search_word, didnt find word in str\n");
 	return (NULL);
 }

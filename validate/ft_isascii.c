@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_dp.c                                         :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 11:21:48 by rimartin          #+#    #+#             */
-/*   Updated: 2021/11/16 12:12:47 by rimartin         ###   ########.fr       */
+/*   Created: 2021/02/13 13:43:38 by rimartin          #+#    #+#             */
+/*   Updated: 2021/12/26 18:26:25 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "validate.h"
 
-void	print_dp(void **r, int fd, int len)
+bool	ft_isascii(const int c)
 {
-	int	i;
-
-	i = -1;
-	if (r == NULL)
-		return ;
-	if (len == 0)
-	{
-		while (r[++i])
-			ft_putendl_fd(r[i], fd);
-	}
-	else
-	{
-		while (++i < len)
-			ft_putstr_fd(r[i], fd);
-	}
+	if (c >= 0 && c <= 127)
+		return (true);
+	return (false);
 }

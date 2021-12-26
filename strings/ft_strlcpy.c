@@ -6,11 +6,11 @@
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 13:41:11 by rimartin          #+#    #+#             */
-/*   Updated: 2021/12/05 14:31:21 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/12/26 18:24:52 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "string.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 {

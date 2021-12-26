@@ -6,11 +6,11 @@
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 13:14:54 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/18 04:54:54 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/12/26 18:26:15 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "validate.h"
 
 bool	ft_isalnum(const int c)
 {

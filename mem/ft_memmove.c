@@ -6,11 +6,11 @@
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 13:42:18 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/18 04:32:34 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/12/26 18:18:04 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "mem.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

@@ -3,12 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+         #
+#    By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/24 20:16:53 by rimartin          #+#    #+#              #
-#    Updated: 2021/12/03 00:01:44 by rimartin         ###   ########.fr        #
+#    Updated: 2021/12/26 18:33:35 by ricardo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+CC		= gcc -Wall -Werror -Wextra -I $(HEADER)
 
 NAME 	= 	libft.a
 
@@ -20,20 +22,20 @@ SRC		= 	mem/ft_bzero.c \
 			mem/ft_memcpy.c \
 			mem/ft_memmove.c \
 			mem/ft_memset.c \
-			mem/guards.c \
-			validation/ft_isalnum.c \
-			validation/ft_isalpha.c \
-			validation/ft_isascii.c \
-			validation/ft_isdigit.c \
-			validation/ft_isprint.c \
-			validation/is_space.c \
-			validation/check_ext.c \
+			mem/ft_guards.c \
+			validate/ft_isalnum.c \
+			validate/ft_isalpha.c \
+			validate/ft_isascii.c \
+			validate/ft_isdigit.c \
+			validate/ft_isprint.c \
+			validate/ft_isspace.c \
+			validate/ft_check_ext.c \
 			print/ft_putchar_fd.c \
 			print/ft_putendl_fd.c \
 			print/ft_putnbr_fd.c \
 			print/ft_putstr_fd.c \
-			print/error_msg.c \
-			print/print_dp.c \
+			print/ft_error_msg.c \
+			print/ft_print_dp.c \
 			strings/ft_strchr.c \
 			strings/ft_split.c \
 			strings/ft_strdup.c \
@@ -49,8 +51,8 @@ SRC		= 	mem/ft_bzero.c \
 			strings/ft_substr.c \
 			strings/ft_tolower.c \
 			strings/ft_toupper.c \
-			strings/strjoin3.c \
-			strings/search_word.c \
+			strings/ft_str3join.c \
+			strings/ft_find_word.c \
 			strings/ft_find_c_in_str.c \
 			list/ft_lstadd_back.c \
 		    list/ft_lstadd_front.c \
@@ -61,32 +63,28 @@ SRC		= 	mem/ft_bzero.c \
 		    list/ft_lstmap.c \
 		    list/ft_lstnew.c \
 		    list/ft_lstsize.c \
-		    list/convert_list_to_arr.c \
+		    list/ft_convert_list_to_dp.c \
 			conv/ft_itoa.c \
 			conv/ft_atoi.c \
-			conv/atoh.c \
-			env/path_env.c \
+			conv/ft_htoa.c \
+			env/ft_env_path.c \
 			math/check_range.c \
-			files/get_next_line_bonus.c
+			fcntl/ft_gnl.c
 			
-
-DEPS_GET = $(shell find $(HEADER_GET) -name *.h)
-HEADER_GET = files
 
 REMOVE_OBJ = $(shell find . -name *.o)
 
-DEPS = $(shell find $(HEADER) -name *.h)
-
-OBJ 	= $(SRC:%.c=%.o)
-
-CC		= gcc -Wall -Werror -Wextra -I $(HEADER)
-OBJ_DIR = Objs
-
 HEADER	= includes
+
+DEPS = $(shell find $(HEADER) -name *.h)
 
 INCLUDES = -I $(HEADER) -I $(HEADER_GET)
 
 LIBS = -L./$(HEADER) -lft
+
+OBJ 	= $(SRC:%.c=%.o)
+
+OBJ_DIR = Objs
 
 Objs/%.o: %.c
 	$(CC) $(INCLUDES) -c -o $@ $<

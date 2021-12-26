@@ -6,11 +6,11 @@
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 13:36:40 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/18 04:58:20 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/12/26 18:24:33 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "string.h"
 
 int	ft_toupper(const int c)
 {

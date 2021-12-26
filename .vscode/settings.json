@@ -1,0 +1,11 @@
+{
+	"files.associations": {
+		"libft.h": "c",
+		"macros.h": "c",
+		"print.h": "c",
+		"string.h": "c",
+		"conv.h": "c",
+		"env.h": "c",
+		"my_fcntl.h": "c"
+	}
+}

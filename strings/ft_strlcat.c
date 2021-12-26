@@ -6,11 +6,12 @@
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 13:41:18 by rimartin          #+#    #+#             */
-/*   Updated: 2021/09/18 04:26:49 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/12/26 18:28:22 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "string.h"
+#include "mem.h"
 
 size_t	ft_strlcat(const char *dst, const char *src, size_t size)
 {

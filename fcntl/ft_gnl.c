@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*   ft_gnl.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 04:26:10 by rimartin          #+#    #+#             */
-/*   Updated: 2021/12/05 14:26:02 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/12/26 18:11:02 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "my_fcntl.h"
 
 static int	ft_strsave(int fd, char **line, char **store)
 {
@@ -49,7 +49,7 @@ static int	ft_norm(int fd, char **line, char **store, int readcount)
 	return (ft_strsave(fd, line, store));
 }
 
-int	get_next_line(int fd, char **line)
+int	ft_gnl(int fd, char **line)
 {
 	static char	*store[100000];
 	char		buff[BUFFER_SIZE + 1];

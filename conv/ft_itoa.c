@@ -6,11 +6,12 @@
 /*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 13:43:15 by rimartin          #+#    #+#             */
-/*   Updated: 2021/12/05 14:25:32 by ricardo          ###   ########.fr       */
+/*   Updated: 2021/12/26 18:30:59 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "conv.h"
+#include "string.h"
 
 int	counter(int n)
 {

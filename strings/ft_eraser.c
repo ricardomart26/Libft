@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   magic_eraser.c                                     :+:      :+:    :+:   */
+/*   ft_eraser.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rimartin <rimartin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 21:45:26 by rimartin          #+#    #+#             */
-/*   Updated: 2021/12/02 20:15:14 by rimartin         ###   ########.fr       */
+/*   Updated: 2021/12/26 18:24:28 by ricardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "string.h"
 
 int	count_set(char *str, char *set)
 {
@@ -35,7 +35,7 @@ int	count_set(char *str, char *set)
 	return (ret);
 }
 
-char	*magic_eraser(char *str, char *set, bool f)
+char	*ft_eraser(char *str, char *set, bool f)
 {
 	char	*ret;
 	int		i;
